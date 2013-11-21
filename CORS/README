@@ -1,0 +1,21 @@
+Instructions of compilation
+
+# corsdb has not been tested yet, CORS can work without it. Just disable it.
+./configure --disable-corsdb
+make
+
+# make will produce the followings:
+library:
+  src/common/libCommon.a
+  src/utils/libUtils.a
+  src/client/.libs/libcorssocket.a
+
+binary:
+  src/proxy/corsproxy
+  src/proxy/nbconfgen
+  src/proxy/nbconfparse
+  src/test/rtpsender
+  src/test/rtpreceiver
+  src/test/streamplayer
+  src/test/streamdump
+  src/utils/convertor_ip2asn
